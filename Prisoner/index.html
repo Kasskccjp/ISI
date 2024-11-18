@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prisoner's Dilemma Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Custom Confirmation Dialog -->
+        <div id="custom-confirm" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to choose Betray?😖</p>
+                <button id="yes-button">Yes</button>
+                <button id="no-button">No</button>
+            </div>
+        </div>
+
+        <!-- Start Page -->
+        <div id="start-page">
+            <h1 id="start-title">Prisoner's Dilemma Game</h1>
+            <button id="start-button" onclick="startGame()">Start</button>
+        </div>
+
+        <!-- Main Game Page (Initially Hidden) -->
+        <div id="game-page" style="display: none;">
+            <h1>Prisoner's Dilemma</h1>
+            <p>Before making your choice, review the outcomes of each combination:</p>
+            <div id="outcomes">
+                <table border="1" cellpadding="10">
+                    <tr>
+                        <th>Your Choice</th>
+                        <th>Other's Choice</th>
+                        <th>Outcome</th>
+                    </tr>
+                    <tr>
+                        <td>Cooperate</td>
+                        <td>Cooperate</td>
+                        <td>Both of you receive a light sentence.</td>
+                    </tr>
+                    <tr>
+                        <td>Cooperate</td>
+                        <td>Betray</td>
+                        <td>You receive a heavy sentence, and the other goes free.</td>
+                    </tr>
+                    <tr>
+                        <td>Betray</td>
+                        <td>Cooperate</td>
+                        <td>You go free, and the other receives a heavy sentence.</td>
+                    </tr>
+                    <tr>
+                        <td>Betray</td>
+                        <td>Betray</td>
+                        <td>Both of you receive a moderate sentence.</td>
+                    </tr>
+                </table>
+            </div>
+            <p>Choose whether to Cooperate or Betray:</p>
+            <div id="choices">
+                <button class="cooperate" onclick="makeChoice('cooperate')">Cooperate</button>
+                <button class="betray" onclick="makeChoice('betray')">Betray</button>
+            </div>
+            <div id="result"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
