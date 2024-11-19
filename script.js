@@ -63,7 +63,7 @@ function startGame() {
     
     if (partnerName) {
         document.querySelectorAll('.partner-name7').forEach(element => {
-            element.innerHTML = `裏切り：${partnerName}さん(満足度)`;
+            element.innerHTML = `${partnerName}さん(満足度)`;
         });
     }
     // Wait for the explosion effect, then show the game page
