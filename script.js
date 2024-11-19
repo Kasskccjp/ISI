@@ -60,8 +60,12 @@ function startGame() {
             element.innerHTML = `裏切り：${partnerName}さんを告発し、すべての罪を${partnerName}さんに押しつける<img src="fight_connect.gif" alt="abomb Animation" />`;
         });
     }
-
-
+    
+    if (partnerName) {
+        document.querySelectorAll('.partner-name7').forEach(element => {
+            element.innerHTML = `裏切り：${partnerName}さん(満足度)`;
+        });
+    }
     // Wait for the explosion effect, then show the game page
     setTimeout(() => {
         document.getElementById('start-page').style.display = 'none';
