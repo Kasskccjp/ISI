@@ -118,3 +118,110 @@ button {
     font-size: 1rem;
     cursor: pointer;
 }
+
+#explosion {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transform: rotate(-15deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#gif-image {
+    width: 200px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 33%; /* 將圖片移到網頁的最右邊 */
+    top: 65%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+.hidden {
+    display: none;
+}
+#gif-image2 {
+    width: 200px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 53%; /* 將圖片移到網頁的最右邊 */
+    top: 65%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+
+#gif-image3 {
+    width: 250px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 80%; /* 將圖片移到網頁的最右邊 */
+    top: 25%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+#gif-image4 {
+    width: 250px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 10%; /* 將圖片移到網頁的最右邊 */
+    top: 25%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+
+#gif-image5 {
+    width: 170px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 2%; /* 將圖片移到網頁的最右邊 */
+    top: 90%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+
+#gif-image6 {
+    width: 200px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 80%; /* 將圖片移到網頁的最右邊 */
+    top: 90%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+
+.image {
+    width: 200px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 85%; /* 將圖片移到網頁的最右邊 */
+    top: 90%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+
+.image2 {
+    width: 200px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 10%; /* 將圖片移到網頁的最右邊 */
+    top: 90%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+
+.image3 {
+    width: 300px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 5%; /* 將圖片移到網頁的最右邊 */
+    top: 10%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}
+
+.image4 {
+    width: 300px; /* 調整圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    position: absolute; /* 使用 absolute 來進行精確定位 */
+    right: 75%; /* 將圖片移到網頁的最右邊 */
+    top: 10%; /* 將圖片的頂部對齊頁面的垂直中間 */
+    transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
+}

@@ -1,64 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
-        <title>Prisoner's Dilemma Game</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ゲーム理論(Game theory)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
         <script src="script.js"></script>
+
     </head>
     <body>
+
         <!-- Custom Confirmation Dialog -->
         <div id="custom-confirm" class="modal">
             <div class="modal-content">
-                <p>Are you sure you want to choose Betray?😖</p>
-                <button id="yes-button">Yes</button>
-                <button id="no-button">No</button>
+                <p>本当に裏切るの、良心痛まない？<img src="wail_r.gif" alt="abomb Animation" /></p>
+                <button id="yes-button">はい！</button>
+                <button id="yes-button">いいえ、全然<img src="power_special.gif" alt="abomb Animation" /></button>
             </div>
         </div>
 
         <!-- Start Page -->
         <div id="start-page">
-            <h1 id="start-title">Prisoner's Dilemma Game</h1>
+            <h1 >ゲーム理論(Game theory)</h1>
+            <h2 id="start-title">囚人のジレンマ</h2>
+            <div id="explosion" class="hidden">
+                <p>version: 上級III-I</p>
+            </div>
             <button id="start-button" onclick="startGame()">Start</button>
+            <img src="abomb.gif" alt="abomb Animation" id="gif-image" class="hidden" />
+            <img src="itdog5.gif" alt="abomb Animation" id="gif-image2" class="hidden" />
+            <img src="dance.gif" alt="abomb Animation" id="gif-image3" class="hidden" />
+            <img src="dance4.gif" alt="abomb Animation" id="gif-image4" class="hidden" />
+            <img src="champagne.gif" alt="abomb Animation" id="gif-image5" class="hidden" />
+            <img src="hehe.gif" alt="abomb Animation" id="gif-image6" class="hidden" />
         </div>
 
         <!-- Main Game Page (Initially Hidden) -->
         <div id="game-page" style="display: none;">
-            <h1>Prisoner's Dilemma</h1>
-            <p>Before making your choice, review the outcomes of each combination:</p>
+            <h1>状況説明    </h1>
+            <ul>
+                <li class="partner-name1">あなたとクラスメイトが結託し、試験にカンニングした噂が担任の先生の耳に入れた。<img src="play.gif" alt="abomb Animation" /></li>
+                <li class="partner-name2"><strong>あなたは後藤先生に軟禁されて尋問を受けている。同時に、クラスメイトも渡邊先生に同じ仕打ちを受けている<img src="whip.gif" alt="abomb Animation" /><</strong></li>
+                <li class="partner-name3">証拠がないので、後藤先生がクラスメイトはすでにあなたを売ったとブラフをかけてきた。<img src="rpg7.gif" alt="abomb Animation" /></li>
+            </ul>
+            <p>あなたは二つの行動をとることができる：</p>
+            <ol>
+                <li class="partner-name6">裏切り：サムさんを告発し、すべての罪をサムさんに押しつける<img src="fight_connect.gif" alt="abomb Animation" /></li>
+                <li>協力：告発しない、二人の潔白を主張する<img src="fight_connect2.gif" alt="abomb Animation" /></li>
+            </ol>
+            <p>以下の結果表を参照し、行動を決めてください：</p>
+            <img src="roast_connect.gif" alt="pig Animation" class="image" />
+            <img src="roast_special.gif" alt="pig Animation" class="image2" />
+            <img src="cook_connect2.gif" alt="pig Animation" class="image3" />
+            <img src="cook_connect.gif" alt="pig Animation" class="image4" />
             <div id="outcomes">
                 <table border="1" cellpadding="10">
                     <tr>
-                        <th>Your Choice</th>
-                        <th>Other's Choice</th>
-                        <th>Outcome</th>
+                        <th>あなたの行動</th>
+                        <th class="partner-name">相棒の行動</th>
+                        <th>結果</th>
+                        <th>あなた(満足度)</th>
+                        <th>サムさん(満足度)</th>
+                        <th>満足度(全体）</th>
                     </tr>
                     <tr>
-                        <td>Cooperate</td>
-                        <td>Cooperate</td>
-                        <td>Both of you receive a light sentence.</td>
+                        <td>協力</td>
+                        <td >協力</td>
+                        <td>二人とも試験点数２５点減点</td>
+                        <td >３</td>
+                        <td >3</td>
+                        <td >6</td>
                     </tr>
                     <tr>
-                        <td>Cooperate</td>
-                        <td>Betray</td>
-                        <td>You receive a heavy sentence, and the other goes free.</td>
+                        <td>協力</td>
+                        <td >裏切り</td>
+                        <td class="partner-name4">あなたが留年、サムさんが無事</td>
+                        <td >1</td>
+                        <td >4</td>
+                        <td >5</td>
                     </tr>
                     <tr>
-                        <td>Betray</td>
-                        <td>Cooperate</td>
-                        <td>You go free, and the other receives a heavy sentence.</td>
+                        <td>裏切り</td>
+                        <td >協力</td>
+                        <td class="partner-name5">サムさんが留年、あなたが無事</td>
+                        <td >4</td>
+                        <td >1</td>
+                        <td >5</td>
                     </tr>
                     <tr>
-                        <td>Betray</td>
-                        <td>Betray</td>
-                        <td>Both of you receive a moderate sentence.</td>
+                        <td>裏切り</td>
+                        <td >裏切り</td>
+                        <td>二人とも試験点数50点減点</td>
+                        <td >2</td>
+                        <td >2</td>
+                        <td >4</td>
                     </tr>
                 </table>
             </div>
-            <p>Choose whether to Cooperate or Betray:</p>
+            <p>p.s. 私情抜きで、自己利益を最大化して決めてください！</p>
+            <p>さあ！ あなたの選択は？<img src="drum.gif" alt="abomb Animation" /></p>
             <div id="choices">
-                <button class="cooperate" onclick="makeChoice('cooperate')">Cooperate</button>
-                <button class="betray" onclick="makeChoice('betray')">Betray</button>
+                <button class="cooperate" onclick="makeChoice('cooperate')">協力</button>
+                <button class="betray" onclick="makeChoice('betray')">裏切り</button>
             </div>
             <div id="result"></div>
         </div>
