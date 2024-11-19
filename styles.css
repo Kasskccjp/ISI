@@ -139,7 +139,7 @@ button {
     width: 200px; /* 調整圖片的寬度 */
     height: auto; /* 保持圖片比例 */
     position: absolute; /* 使用 absolute 來進行精確定位 */
-    right: 33%; /* 將圖片移到網頁的最右邊 */
+    right: 30%; /* 將圖片移到網頁的最右邊 */
     top: 65%; /* 將圖片的頂部對齊頁面的垂直中間 */
     transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
 }
@@ -150,7 +150,7 @@ button {
     width: 200px; /* 調整圖片的寬度 */
     height: auto; /* 保持圖片比例 */
     position: absolute; /* 使用 absolute 來進行精確定位 */
-    right: 53%; /* 將圖片移到網頁的最右邊 */
+    right: 60%; /* 將圖片移到網頁的最右邊 */
     top: 65%; /* 將圖片的頂部對齊頁面的垂直中間 */
     transform: translateY(-50%); /* 向上平移圖片，使其垂直居中 */
 }
